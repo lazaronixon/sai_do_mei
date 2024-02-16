@@ -26,7 +26,6 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
-    extralite (2.7.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -62,6 +61,9 @@ GEM
     ruby2_keywords (0.0.5)
     sequel (5.77.0)
       bigdecimal
+    sqlite3 (1.7.2)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (1.7.2-x86_64-darwin)
     tilt (2.3.0)
     tilt-jbuilder (0.7.1)
       jbuilder
@@ -74,13 +76,13 @@ PLATFORMS
   x86_64-darwin-23
 
 DEPENDENCIES
-  extralite
   jbuilder
   puma
   rack-unreloader
   rake
   roda
   sequel
+  sqlite3
   tilt
   tilt-jbuilder
 
