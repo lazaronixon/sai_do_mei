@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "roda"
 gem "sequel"
-gem "puma"
+gem "falcon"
 gem "extralite"
 gem "rack-unreloader"
 gem "rake"

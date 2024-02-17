@@ -1,7 +1,7 @@
 require_relative "models"
 
 task :server do |t|
-	sh "puma -C ./config/puma.rb"
+	sh "bundle exec falcon serve -b http://0.0.0.0:3000"
 end
 
 namespace :db do
