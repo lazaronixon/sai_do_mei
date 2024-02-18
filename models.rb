@@ -1,12 +1,13 @@
 require_relative "db"
 require "sequel/model"
 
-dev = ENV.fetch("RODA_ENV", "development") == "development"
-
-Sequel.inflections do |inflect|
-  inflect.plural(/ao$/i,  "oes")
-  inflect.singular(/oes$/i, 'ao')
+require "active_support"
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.plural(/ao$/i, "oes")
+  inflect.singular(/oes$/i, "ao")
 end
+
+dev = ENV.fetch("RODA_ENV", "development") == "development"
 
 Sequel::Model.cache_associations     = false if dev
 Sequel::Model.typecast_on_assignment = false
